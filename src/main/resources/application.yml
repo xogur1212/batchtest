@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: {{URL}}
+    username: {{USERNAME}}
+    password: {{PASSWORD}}
+    driver-class-name: {{ DRIVE_CLASS_NAME }}
+  batch:
+    jpa:
+      hibernate:
+        ddl-auto: update # ?????? ??? ?? ???? (none, validate, update, create, create-drop)
+    jdbc:
+      initialize-schema: always
+
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui   # swagger-ui custom path
+  api-docs:
+    path: /api-docs     # /api-docs endpoint custom path (json format)
+
+server:
+  port: 8022
